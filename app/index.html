@@ -13,6 +13,8 @@
         <link rel="dns-prefetch" href="//ajax.googleapis.com">
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
 
+        <link rel="favicon" href="favicon.ico">
+
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Caesar+Dressing|Open+Sans">
         <!-- build:css({.tmp,app}) styles/main.css -->
         <link rel="stylesheet" href="styles/normalize-2.1.2.css">
@@ -45,13 +47,15 @@
             (function ($) {
                 'use strict';
 
-                var images = [
-                    '../images/jet-sky.jpg',
-                    '../images/dew.jpg',
-                    '../images/blurred-lines.jpg'
-                ];
+                if ($(window).width() > 500) {
+                    var images = [
+                        '../images/jet-sky.jpg',
+                        '../images/dew.jpg',
+                        '../images/blurred-lines.jpg'
+                    ];
 
-                $.backstretch(images, {duration: 10000, fade: 2000})
+                    $.backstretch(images, {duration: 10000, fade: 2000})
+                }
             }(jQuery));
         </script>
     </body>
