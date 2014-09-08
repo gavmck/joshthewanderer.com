@@ -1,1 +1,0 @@
-My personal site.  Viewable live at [josh-rose.net](http://josh-rose.net).
