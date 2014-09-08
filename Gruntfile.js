@@ -55,7 +55,7 @@ module.exports = function (grunt) {
         },
         connect: {
             options: {
-                port: 9000,
+                port: 1337,
                 // change this to '0.0.0.0' to access the server from outside
                 hostname: 'localhost'
             },
@@ -181,7 +181,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        // not used since Uglify task does concat,
+        // not used since §Uglify task does concat,
         // but still available if needed
         /*concat: {
             dist: {}
