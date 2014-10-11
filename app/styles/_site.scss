@@ -20,7 +20,8 @@ a {
 }
 
 body {
-  background: url(../images/60H.jpg) fixed;
+  background-image: url(../images/60H.jpg);
+  background-position: fixed;;
   background-size: cover;
   font-family: Lato, sans-serif;
   color: $text-color;
