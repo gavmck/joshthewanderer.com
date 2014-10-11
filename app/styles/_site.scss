@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Reenie Beanie', sans-serif;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+body {
+  background: url(../images/60H.jpg) fixed;
+  background-size: cover;
+  font-family: Lato, sans-serif;
+  color: $text-color;
+}
+
+.browse-happy {
+  border-radius: 1em;
+  color: #fff;
+  background-color: $alert-color;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+}
+
+.page-header {
+  height: 40%;
+  text-align: center;
+
+  @include vertical-align-parent;
+
+  .title {
+    @include vertical-align-child;
+    color: #fff;
+    font-size: 5em;
+  }
+}
+
+.page-content {
+  background-color: $background-color;
+  text-align: center;
+  transition: margin 2s;
+  min-height: 50%;
+  padding: 1em;
+}
+
+.emphasise {
+  font-family: 'Reenie Beanie', sans-serif;
+  font-size: 1.5em;
+}
+
+.page-footer {
+  background-color: $background-color;
+  height: 10%;
+}
