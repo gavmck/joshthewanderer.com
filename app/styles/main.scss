@@ -1,3 +1,147 @@
-@import "variables";
-@import "mixins";
-@import "site";
+// bower:scss
+// endbower
+
+$brand-primary: #6c2721;
+$brand-secondary: #fff;
+$default-bg-color: #333;
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+footer, main, section {
+  display: block;
+}
+
+a {
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+  color: $brand-primary;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1em;
+
+  &:active, :hover{
+    outline: 0;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    border-bottom: 0.075em $brand-primary solid;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+  }
+
+  &:hover:after, &:focus:after {
+    transform: scaleX(1);
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 400;
+  font-size: 2em;
+  color: $brand-secondary;
+  background-color: $default-bg-color;
+}
+
+.browsehappy {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+
+  .highlight {
+    color: $brand-primary;
+  }
+
+  .splash {
+    height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    .page-title {
+      font-size: 2em;
+      margin: 0.67em 0;
+      font-weight: 600;
+
+      .highlight {
+        font-weight: 700;
+      }
+    }
+
+    .lead {
+      margin-top: .75em;
+      margin-bottom: 0;
+
+      a {
+        font-weight: 700;
+      }
+    }
+
+    .beer {
+      margin-top: .75em;
+
+      .letter-fix {
+        margin-left: -0.2em
+      }
+    }
+  }
+
+  .contact {
+    text-align: right;
+
+    .contact-list {
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: .25em;
+      margin-right: .75em;
+      padding-left: 0;
+
+      li {
+        display: inline-block;
+
+        a {
+          display: block;
+          color: #fff;
+
+          &:after {
+            border-color: #fff;
+          }
+        }
+
+        svg {
+          width: .75em;
+
+          use {
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    .contact {
+      .contact-list {
+        text-align: center;
+
+        li svg {
+          width: 1em;
+        }
+      }
+    }
+  }
+}
