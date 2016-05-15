@@ -1,52 +1,49 @@
-// bower:scss
-// endbower
-
+$white: #fff;
 $brand-primary: #6c2721;
-$brand-secondary: #fff;
+$brand-secondary: $white;
 $default-bg-color: #333;
 
-html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+body {
+  background-color: $default-bg-color;
+  color: $brand-secondary;
+  font-family: 'Josefin Slab', serif;
+  font-size: 2em;
+  font-weight: 400;
+  margin: 0;
 }
 
-footer, main, section {
+footer,
+main,
+section {
   display: block;
 }
 
 a {
-  outline: none;
   background-color: transparent;
-  display: inline-block;
   color: $brand-primary;
-  text-decoration: none;
+  display: inline-block;
   font-weight: 600;
   line-height: 1em;
+  outline: none;
+  text-decoration: none;
 
-  &:active, :hover{
+  &:active,
+  &:hover,
+  &:focus {
     outline: 0;
+
+    &:after {
+      transform: scaleX(1);
+    }
   }
 
   &:after {
-    display: block;
+    border-bottom: .075em $brand-primary solid;
     content: '';
-    border-bottom: 0.075em $brand-primary solid;
+    display: block;
     transform: scaleX(0);
     transition: transform 250ms ease-in-out;
   }
-
-  &:hover:after, &:focus:after {
-    transform: scaleX(1);
-  }
-}
-
-body {
-  margin: 0;
-  font-family: 'Josefin Slab', serif;
-  font-weight: 400;
-  font-size: 2em;
-  color: $brand-secondary;
-  background-color: $default-bg-color;
 }
 
 .browsehappy {
@@ -56,24 +53,24 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   height: 100vh;
+  justify-content: center;
 
   .highlight {
     color: $brand-primary;
   }
 
   .splash {
-    height: 98vh;
     display: flex;
     flex-direction: column;
+    height: 98vh;
     justify-content: center;
     text-align: center;
 
     .page-title {
       font-size: 2em;
-      margin: 0.67em 0;
       font-weight: 600;
+      margin: .67em 0;
 
       .highlight {
         font-weight: 700;
@@ -81,8 +78,8 @@ body {
     }
 
     .lead {
-      margin-top: .75em;
       margin-bottom: 0;
+      margin-top: .75em;
 
       a {
         font-weight: 700;
@@ -93,7 +90,7 @@ body {
       margin-top: .75em;
 
       .letter-fix {
-        margin-left: -0.2em
+        margin-left: -.2em;
       }
     }
   }
@@ -103,20 +100,20 @@ body {
 
     .contact-list {
       list-style: none;
-      margin-top: 0;
       margin-bottom: .25em;
       margin-right: .75em;
+      margin-top: 0;
       padding-left: 0;
 
       li {
         display: inline-block;
 
         a {
+          color: $white;
           display: block;
-          color: #fff;
 
           &:after {
-            border-color: #fff;
+            border-color: $white;
           }
         }
 
@@ -124,7 +121,7 @@ body {
           width: .75em;
 
           use {
-            fill: #fff;
+            fill: $white;
           }
         }
       }
@@ -132,7 +129,7 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
   .container {
     .contact {
       .contact-list {
