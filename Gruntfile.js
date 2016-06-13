@@ -32,10 +32,6 @@ module.exports = function (grunt) {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-      bower: {
-        files: ['bower.json'],
-        tasks: ['wiredep']
-      },
       babel: {
         files: ['<%= config.app %>/scripts/{,*/}*.js'],
         tasks: ['babel:dist']
@@ -77,7 +73,7 @@ module.exports = function (grunt) {
           server: {
             baseDir: ['.tmp', config.app],
             routes: {
-              '/bower_components': './bower_components'
+              '/node_modules': './node_modules'
             }
           }
         }
@@ -91,7 +87,7 @@ module.exports = function (grunt) {
           server: {
             baseDir: ['.tmp', './test', config.app],
             routes: {
-              '/bower_components': './bower_components'
+              '/node_modules': './node_modules'
             }
           }
         }
@@ -200,18 +196,6 @@ module.exports = function (grunt) {
           src: '{,*/}*.css',
           dest: '.tmp/styles/'
         }]
-      }
-    },
-
-    // Automatically inject Bower components into the HTML file
-    wiredep: {
-      app: {
-        src: ['<%= config.app %>/index.html'],
-        ignorePath: /^(\.\.\/)*\.\./
-      },
-      sass: {
-        src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        ignorePath: /^(\.\.\/)+/
       }
     },
 
@@ -357,7 +341,6 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'wiredep',
       'svgstore',
       'concurrent:server',
       'postcss',
@@ -388,7 +371,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'wiredep',
     'svgstore',
     'useminPrepare',
     'concurrent:dist',
