@@ -2,9 +2,7 @@
   "private": true,
   "devDependencies": {
     "autoprefixer": "^6.0.2",
-    "chai": "^3.5.0",
     "grunt": "^1.0.1",
-    "grunt-babel": "^6.0.0",
     "grunt-browser-sync": "^2.1.2",
     "grunt-concurrent": "^2.3.0",
     "grunt-contrib-clean": "^1.0.0",
@@ -15,49 +13,17 @@
     "grunt-contrib-imagemin": "^1.0.1",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-eslint": "^18.1.0",
     "grunt-filerev": "^2.2.0",
     "grunt-includes": "^1.0.0",
-    "grunt-mocha": "^1.0.2",
     "grunt-newer": "^1.1.0",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.0.0",
-    "grunt-svg-sprite": "^1.2.13",
-    "grunt-svginjector": "^0.2.0",
-    "grunt-svgmin": "^3.2.0",
-    "grunt-svgstore": "^1.0.0",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^3.0.1",
-    "imagemin": "^3.2.2",
     "jit-grunt": "^0.10.0",
-    "mocha": "^2.5.3",
     "time-grunt": "^1.1.0"
   },
   "engines": {
     "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "grunt test"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended"
-    ],
-    "env": {
-      "node": true,
-      "browser": true,
-      "es6": true,
-      "mocha": true
-    },
-    "rules": {
-      "quotes": [
-        2,
-        "single"
-      ],
-      "indent": [
-        2,
-        2
-      ]
-    }
   }
 }
