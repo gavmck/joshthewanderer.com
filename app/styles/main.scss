@@ -1,13 +1,11 @@
 $white: #fff;
+$grey: #333;
 $brand-primary: #6c2721;
-$brand-secondary: $white;
-$default-bg-color: #333;
 
 body {
-  background-color: $default-bg-color;
-  color: $brand-secondary;
+  color: $grey;
   font-family: 'Josefin Slab', serif;
-  font-size: 2em;
+  font-size: 100%;
   font-weight: 400;
   margin: 0;
 }
@@ -66,9 +64,10 @@ a {
     height: 98vh;
     justify-content: center;
     text-align: center;
+    font-size: 1.5rem;
 
     .page-title {
-      font-size: 2em;
+      font-size: 4rem;
       font-weight: 600;
       margin: .67em 0;
 
@@ -96,47 +95,34 @@ a {
   }
 
   .contact {
-    text-align: right;
+    text-align: center;
 
     .contact-list {
       list-style: none;
       margin-bottom: .25em;
-      margin-right: .75em;
       margin-top: 0;
       padding-left: 0;
 
       li {
         display: inline-block;
+        font-size: 1rem;
+
+        &:before {
+          content: '|';
+          margin-right: .15em;
+        }
+
+        &:first-of-type:before {
+          content: '';
+        }
 
         a {
-          color: $white;
-          display: block;
+          font-weight: 400;
+          color: $brand-primary;
 
           &:after {
-            border-color: $white;
+            border-color: $brand-primary;
           }
-        }
-
-        svg {
-          width: .75em;
-
-          use {
-            fill: $white;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (min-width: 480px) {
-  .container {
-    .contact {
-      .contact-list {
-        text-align: center;
-
-        li svg {
-          width: 1em;
         }
       }
     }
