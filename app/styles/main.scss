@@ -29,12 +29,12 @@ a {
   &:focus {
     outline: 0;
 
-    &:after {
+    &::after {
       transform: scaleX(1);
     }
   }
 
-  &:after {
+  &::after {
     border-bottom: .075em $brand-primary solid;
     content: '';
     display: block;
@@ -56,10 +56,10 @@ a {
   .splash {
     display: flex;
     flex-direction: column;
+    font-size: 1.5rem;
     height: 98vh;
     justify-content: center;
     text-align: center;
-    font-size: 1.5rem;
 
     .page-title {
       font-size: 4rem;
@@ -102,20 +102,22 @@ a {
         display: inline-block;
         font-size: 1rem;
 
-        &:before {
+        &::before {
           content: '|';
           margin-right: .15em;
         }
 
-        &:first-of-type:before {
-          content: '';
+        &:first-of-type {
+          &::before {
+            content: '';
+          }
         }
 
         a {
-          font-weight: 400;
           color: $brand-primary;
+          font-weight: 400;
 
-          &:after {
+          &::after {
             border-color: $brand-primary;
           }
         }
