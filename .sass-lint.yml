@@ -1,41 +1,19 @@
-# Rule Configuration
+files:
+  include: '**/*.s+(a|c)ss'
+options:
+  formatter: stylish
+  merge-default-rules: true
 rules:
-  extends-before-mixins: 2
-  extends-before-declarations: 2
-  placeholder-in-extend: 2
-  mixins-before-declarations:
-    - 2
-
-  no-warn: 1
-  no-debug: 1
-  no-ids: 2
-  no-important: 2
-  hex-notation:
-    - 2
-    -
-      style: lowercase
-  indentation:
-    - 2
-    -
-      size: 2
-  property-sort-order: 0
-  variable-for-property: 0
-  quotes:
-    - 2
-    -
-      style: single
-
+  class-name-format:
+    - 1
+    - convention: hyphenatedbem
+  id-name-format:
+    - 1
+    - convention: hyphenatedbem
   nesting-depth:
     - 1
-    -
-      max-depth: 4
-
-  space-after-comma: 2
-  space-after-colon: 2
-  single-line-per-selector: 2
-  empty-line-between-blocks: 2
-  trailing-semicolon: 2
-  # too buggy to use
-  no-mergeable-selectors: 0
-  force-pseudo-nesting: 0
-  force-element-nesting: 0
+    - max-depth: 4
+  placeholder-name-format:
+    - 1
+    - convention: hyphenatedbem
+  property-sort-order: 1
