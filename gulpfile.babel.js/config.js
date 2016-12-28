@@ -18,13 +18,14 @@ config.styles = {
 };
 
 config.scripts = {
-  src: `${config.paths.app}/scripts/main.js`,
+  src: `${config.paths.app}/scripts/`,
+  files: ['main.js', 'sw.js'],
   dist: `${config.paths.dist}/scripts/`,
   babelify: {},
 };
 
 config.html = {
-  src: `${config.paths.app}/**/*.{ico,txt,html}`,
+  src: `${config.paths.app}/**/*.{ico,png,svg,txt,html,xml,json}`,
   dist: `${config.paths.dist}`,
 };
 
