@@ -1,0 +1,22 @@
+{
+  "name": "Josh Rose - Full Stack Web Developer",
+  "short_name": "Josh Rose",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6c2721",
+  "background_color": "#6c2721",
+  "description": "Josh Rose's personal site.",
+  "lang": "en-GB",
+  "icons": [
+    {
+      "src": "\/images\/icons\/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image\/png"
+    },
+    {
+      "src": "\/images\/icons\/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image\/png"
+    }
+  ],
+}
