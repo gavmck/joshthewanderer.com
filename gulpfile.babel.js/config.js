@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 const config = {};
 
 config.paths = {
@@ -43,6 +47,22 @@ config.clean = {
 
 config.revision = {
   dontRenameFile: [/^\/index.html/g, /^\/robots.txt/g],
+};
+
+config.deploy = {
+  paths: [config.paths.dist],
+  rsync: {
+    progress: true,
+    incremental: true,
+    relative: true,
+    emptyDirectories: true,
+    recursive: true,
+    clean: true,
+    exclude: [],
+    hostname: process.env.DEPLOY_HOSTNAME,
+    username: process.env.DEPLOY_USERNAME,
+    destination: process.env.DEPLOY_FOLDER,
+  },
 };
 
 export default config;
