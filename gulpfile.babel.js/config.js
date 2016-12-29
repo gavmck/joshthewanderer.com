@@ -29,7 +29,7 @@ config.scripts = {
 };
 
 config.html = {
-  src: `${config.paths.app}/**/*.{ico,png,svg,txt,html,xml,json}`,
+  src: `${config.paths.app}/**/*.{ico,png,svg,txt,html,xml,json,woff}`,
   dist: `${config.paths.dist}`,
 };
 

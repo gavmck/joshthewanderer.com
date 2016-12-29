@@ -2,9 +2,14 @@ $white: #fff;
 $grey: #333;
 $brand-primary: #6c2721;
 
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../fonts/JosefinSans-Regular.woff') format('woff');
+}
+
 body {
   color: $grey;
-  font-family: 'Josefin Slab', serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 100%;
   font-weight: 400;
   margin: 0;
