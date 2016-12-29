@@ -32,24 +32,24 @@ self.addEventListener('fetch', (event) => {
         const fetchRequest = event.request.clone();
 
         return fetch(fetchRequest).then(
-          (r) => {
+          (res) => {
             // Check if we received a valid response
-            if (!r || r.status !== 200 || r.type !== 'basic') {
-              return r;
+            if (!res || res.status !== 200 || res.type !== 'basic') {
+              return res;
             }
 
             // IMPORTANT: Clone the response. A response is a stream
             // and because we want the browser to consume the response
             // as well as the cache consuming the response, we need
             // to clone it so we have two streams.
-            const responseToCache = r.clone();
+            const responseToCache = res.clone();
 
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
               });
 
-            return r;
+            return res;
           },
         );
       }),
