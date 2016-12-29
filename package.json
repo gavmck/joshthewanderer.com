@@ -6,7 +6,8 @@
   },
   "scripts": {
     "build": "gulp build",
-    "serve": "gulp"
+    "serve": "gulp",
+    "deploy": "gulp deploy"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
