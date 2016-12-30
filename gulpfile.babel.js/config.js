@@ -24,7 +24,10 @@ config.styles = {
 config.scripts = {
   src: `${config.paths.app}/scripts/`,
   files: ['main.js', 'sw.js'],
-  dist: `${config.paths.dist}/scripts/`,
+  dist: {
+    'main.js': `${config.paths.dist}/scripts/`,
+    'sw.js': `${config.paths.dist}/`,
+  },
   babelify: {},
 };
 

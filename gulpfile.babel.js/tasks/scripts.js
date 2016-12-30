@@ -17,7 +17,7 @@ function bundle(debug = false) {
                             .pipe(sourcemaps.init({ loadMaps: debug }))
                             .pipe(uglify())
                             .pipe(sourcemaps.write('.'))
-                            .pipe(gulp.dest(config.scripts.dist));
+                            .pipe(gulp.dest(config.scripts.dist[`${entry}`]));
   });
 
   return stream.merge.apply(null, tasks);
